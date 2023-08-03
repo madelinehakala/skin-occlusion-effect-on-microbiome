@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # downloading data from SRA Explorer
-# accession #: PRJNA492751
+# accession: PRJNA492751
 curl -L ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR790/003/SRR7908173/SRR7908173.fastq.gz -o SRR7908173_Pt16.JA.fastq.gz
 curl -L ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR790/002/SRR7908172/SRR7908172.fastq.gz -o SRR7908172_Pt16.SS.fastq.gz
 curl -L ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR790/005/SRR7908175/SRR7908175.fastq.gz -o SRR7908175_Pt6.SS.fastq.gz
