@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+### deinterleaving fecal sample files
+for file in /cloud/project/fecal_samples/*; do
+  pt_num="${file##*_}"  # Extract everything after the last underscore
+  pt_num="${pt_num%%.*}"  # Remove the file extension
+
+  # Create temporary files to store intermediate results
+  temp_file1=$(mktemp)
+  temp_file2=$(mktemp)
+
+  # Process the file and split into two parts
+  zcat "$file" | paste - - - - - - - - | cut -f 1-4 | tr "\t" "\n" > "$temp_file1"
+  zcat "$file" | paste - - - - - - - - | cut -f 5-8 | tr "\t" "\n" > "$temp_file2"
+
+  # Move the temporary files to final destination with correct filenames
+  mv "$temp_file1" "/cloud/project/deinterleaved_fecal_samples/SS${pt_num}-1.fq"
+  mv "$temp_file2" "/cloud/project/deinterleaved_fecal_samples/SS${pt_num}-2.fq"
+done
+
+### deinterleaving jejunal sample files
+for file in /cloud/project/jejunal_samples/*; do
+  pt_num="${file##*_}"  # Extract everything after the last underscore
+  pt_num="${pt_num%%.*}"  # Remove the file extension
+
+  # Create temporary files to store intermediate results
+  temp_file1=$(mktemp)
+  temp_file2=$(mktemp)
+
+  # Process the file and split into two parts
+  zcat "$file" | paste - - - - - - - - | cut -f 1-4 | tr "\t" "\n" > "$temp_file1"
+  zcat "$file" | paste - - - - - - - - | cut -f 5-8 | tr "\t" "\n" > "$temp_file2"
+
+  # Move the temporary files to final destination with correct filenames
+  mv "$temp_file1" "/cloud/project/deinterleaved_jejunal_samples/JA${pt_num}-1.fq"
+  mv "$temp_file2" "/cloud/project/deinterleaved_jejunal_samples/JA${pt_num}-2.fq"
+done
