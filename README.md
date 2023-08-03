@@ -1,5 +1,5 @@
 # Comparing the Stool and Jejunal Microbiomes
-Reanalyzing jejunal and stool sequencing data using updated approaches to determine whether there is a difference in microbial profiles. Data is by Zeichner et al.
+Reanalyzing jejunal and stool sequencing data using updated approaches to determine whether there is a difference in microbial profiles. Data: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6521997/
 
 Workflow:
 1. Download FASTQ files from SRA Explorer
