@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # downloading data from SRA Explorer
 # accession #: PRJNA492751
