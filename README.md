@@ -5,4 +5,4 @@ Workflow:
 1. Download FASTQ files from SRA Explorer
 2. Trim primers using CutAdapt
 3. ASV identification using DADA2
-6. Diveristy Analysis using PhyloSeq
+6. Diversity Analysis using PhyloSeq
