@@ -74,3 +74,4 @@ curl -L ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR302/001/SRR3027121/SRR3027121_1.fa
 curl -L ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR302/001/SRR3027121/SRR3027121_2.fastq.gz -o u19_2.fastq.gz
 curl -L ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR302/002/SRR3027122/SRR3027122_1.fastq.gz -o u20_1.fastq.gz
 curl -L ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR302/002/SRR3027122/SRR3027122_2.fastq.gz -o u20_2.fastq.gz
+
